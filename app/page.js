@@ -106,7 +106,6 @@ function Hero() {
   });
 
   // Cinematic Parallax Transforms with strict clamping to prevent negative CSS values causing browser black screen glitches
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.2], { clamp: true });
   const textY = useTransform(scrollYProgress, [0, 1], [0, -200], { clamp: true });
   const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0], { clamp: true });
 
@@ -122,9 +121,8 @@ function Hero() {
   return (
     <header className="hero" ref={heroRef}>
       <motion.video
-        style={{ scale: videoScale }}
-        initial={{ opacity: 0, scale: 1.05 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1.2, ease: easeExpo }}
         className="hero-video"
         autoPlay

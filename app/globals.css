@@ -2594,6 +2594,22 @@ a {
     margin-top: auto;
 }
 
+@media (max-width: 580px) {
+    .wizard-navigation-actions {
+        flex-direction: column-reverse;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    .wizard-navigation-actions button,
+    .wizard-navigation-actions a {
+        width: 100% !important;
+        justify-content: center;
+    }
+    .wizard-navigation-actions div {
+        display: none;
+    }
+}
+
 .wizard-btn-primary {
     display: inline-flex;
     align-items: center;
@@ -2816,11 +2832,20 @@ a {
 .success-action-wrap {
     margin-top: 0.5rem;
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 
 .success-home-btn {
-    width: 100%;
+    width: fit-content;
+    min-width: 240px;
     justify-content: center;
     padding: 0.9rem 2.2rem;
+}
+
+@media (max-width: 580px) {
+    .success-home-btn {
+        width: 100%;
+    }
 }
 
