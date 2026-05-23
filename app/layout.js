@@ -18,6 +18,10 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+export const viewport = {
+  colorScheme: "light",
+};
+
 export const metadata = {
   metadataBase: new URL(SITE_URL),
   title: "Lucas Automation | Custom Workflow & Chatbot Automations",

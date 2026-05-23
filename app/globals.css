@@ -126,6 +126,7 @@ a {
 
 .section {
     padding: var(--space-2xl) 0;
+    background-color: var(--color-bg);
 }
 
 .section-alt {
