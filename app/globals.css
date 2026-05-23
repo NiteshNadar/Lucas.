@@ -412,7 +412,7 @@ a {
     text-align: center;
     position: relative;
     overflow: hidden;
-    background-color: oklch(0.15 0.02 250);
+    background-color: var(--color-bg);
 }
 
 .hero-video {
