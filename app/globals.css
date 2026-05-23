@@ -52,6 +52,7 @@
 
 html {
     scroll-padding-top: 6rem;
+    background-color: oklch(0.98 0.008 240); /* Force static light theme background immediately on load, preventing dark flashing */
 }
 
 body {

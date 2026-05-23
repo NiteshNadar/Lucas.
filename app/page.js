@@ -105,11 +105,11 @@ function Hero() {
     offset: ["start start", "end start"]
   });
 
-  // Cinematic Parallax Transforms
-  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.2]);
-  const videoOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.2]);
-  const textY = useTransform(scrollYProgress, [0, 1], [0, -200]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  // Cinematic Parallax Transforms with strict clamping to prevent negative CSS values causing browser black screen glitches
+  const videoScale = useTransform(scrollYProgress, [0, 1], [1, 1.2], { clamp: true });
+  const videoOpacity = useTransform(scrollYProgress, [0, 1], [1, 0.2], { clamp: true });
+  const textY = useTransform(scrollYProgress, [0, 1], [0, -200], { clamp: true });
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0], { clamp: true });
 
   useEffect(() => {
     const hour = new Date().getHours();
